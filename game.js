@@ -229,7 +229,7 @@
     setTimeout(() => {
       if (state !== thisGame) return; // a new game was started meanwhile
       showModal(
-        won ? "🎉 You solved it!" : gaveUp ? "🏳️ You gave up" : "💀 Hanged!",
+        won ? "🎉 You solved it!" : gaveUp ? "🏳️ You gave up" : "💦 The cat sank!",
         won
           ? `<ul>
                <li>Letters guessed: <b>${state.guessed.size}</b> of ${state.letterBudget}</li>
@@ -388,7 +388,7 @@
         <li><b>Cryptic clues</b> (the default) work like newspaper cryptics: a plain definition at the start or end, plus wordplay that builds the same answer. Watch for anagrams ("broken", "wildly", "cooked"), hidden words ("found in", "seen in"), sound-alikes ("we hear"), reversals ("returning") and answers built from parts. For example, "Canoe capsized in the deep (5)" is OCEAN: an anagram of CANOE, with "the deep" as the definition. Prefer plain clues? Switch to <b>Quick</b>.</li>
         <li><b>Click a word</b> in the grid or the clue list and type the whole word to solve it. You'll need to do this to finish the grid. A wrong word costs a life.</li>
         <li>Score: +${WORD_SOLVE_BONUS} for each word you type correctly, +${UNUSED_LETTER_BONUS} for each letter guess you don't use, +${LIFE_BONUS} for each life left.</li>
-        <li>Fill the whole grid before you're hanged to win.</li>
+        <li>Fill the whole grid to win. Six mistakes will sink the cat!</li>
       </ul>`,
       "Let's play"
     );
